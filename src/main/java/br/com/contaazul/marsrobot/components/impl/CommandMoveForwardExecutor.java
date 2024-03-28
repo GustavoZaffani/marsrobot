@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CommandMoveForwardExecutor implements CommandExecutor {
+
     @Override
     public LocalizationDTO execute(LocalizationDTO localizationDTO) {
         switch (localizationDTO.direction()) {

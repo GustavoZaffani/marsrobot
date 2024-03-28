@@ -3,7 +3,9 @@ package br.com.contaazul.marsrobot.model;
 import br.com.contaazul.marsrobot.enumeration.Command;
 import br.com.contaazul.marsrobot.enumeration.Direction;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDateTime;
@@ -11,7 +13,7 @@ import java.util.UUID;
 
 @Table(name = "robot_command_history")
 @Entity(name = "RobotCommandHistory")
-@Getter
+@Data
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class RobotCommandHistory {

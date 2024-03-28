@@ -57,8 +57,6 @@ public class RobotMoveServiceImpl implements RobotMoveService {
 
         String[] commands = robotMoveRequestDTO.commands().split("");
         for (String command : commands) {
-            System.out.println(currentLocalization);
-
             currentLocalization = commandStrategy.getExecutor(Command.fromValue(command)).execute(currentLocalization);
             mapSizeValidator.validateLimitSize(currentLocalization.coordinateX(), currentLocalization.coordinateY());
             robotColisionValidator.validateColisionOnMoveRobot(robot.getId(), currentLocalization.coordinateX(), currentLocalization.coordinateY());

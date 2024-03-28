@@ -1,0 +1,1 @@
+INSERT INTO robot (id, "name", direction, coordinate_x, coordinate_y, start_operation, finish_operation, active) VALUES ('2667ac36-94e1-45b6-b4fd-759f5eecdc10', 'Rover', 'NORTH', 0, 0, '2024-03-27 15:00:00.000', NULL, true);

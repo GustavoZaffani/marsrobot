@@ -7,6 +7,4 @@ public class MarsConstants {
     public static final Integer MIN_X_AXIS = 0;
     public static final Integer MIN_Y_AXIS = 0;
     public static final Long MAX_ROBOTS = 10L;
-
-
 }
