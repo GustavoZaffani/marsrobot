@@ -14,7 +14,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.UUID;
 
-@RequestMapping("/robot")
+@RequestMapping("/v1/robot")
 @RestController
 public class RobotController {
 
