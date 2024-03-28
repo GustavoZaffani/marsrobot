@@ -41,8 +41,6 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 
 # Como Rodar o Projeto
 
-Este projeto foi construído utilizando [Spring Boot](https://spring.io/projects/spring-boot) e [Maven](https://maven.apache.org/). 
-
 Para utilizá-lo basta executar o projeto localmente na sua IDE de preferência ou iniciar via Docker.
 
 ## Opção 1: Executar localmente na IDE
