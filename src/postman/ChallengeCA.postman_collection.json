@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "859cd4a9-cdef-46f5-8582-80ba88123620",
+		"name": "ChallengeCA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10615697"
+	},
+	"item": [
+		{
+			"name": "CreateRobot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rover\",\r\n    \"direction\": \"NORTH\",\r\n    \"positionX\": 2,\r\n    \"positionY\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KillRobot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot/kill/05552499-a348-4232-a6b6-1d8ce9eedfc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot",
+						"kill",
+						"05552499-a348-4232-a6b6-1d8ce9eedfc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MoveRobot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"commands\": \"RRR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot/move/05552499-a348-4232-a6b6-1d8ce9eedfc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot",
+						"move",
+						"05552499-a348-4232-a6b6-1d8ce9eedfc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetrieveRobot",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot/05552499-a348-4232-a6b6-1d8ce9eedfc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot",
+						"05552499-a348-4232-a6b6-1d8ce9eedfc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListRobots",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot?sort=name&direction=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "name"
+						},
+						{
+							"key": "direction",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetrieveHistoryRobot",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot/history/05552499-a348-4232-a6b6-1d8ce9eedfc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot",
+						"history",
+						"05552499-a348-4232-a6b6-1d8ce9eedfc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPictureRobot",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/robot/picture/05552499-a348-4232-a6b6-1d8ce9eedfc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"robot",
+						"picture",
+						"05552499-a348-4232-a6b6-1d8ce9eedfc0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -18,12 +18,12 @@ public class RobotInitiatorServiceImpl implements RobotInitiatorService {
     private RobotRepository robotRepository;
 
     @Autowired
-    private RobotInitiatorValidator robotInitiatorValidatorComponent;
+    private RobotInitiatorValidator robotInitiatorValidator;
 
     @Override
     @Transactional
     public RobotInitiatorResponseDTO initRobot(RobotInitiatorRequestDTO robotInitiator) {
-        robotInitiatorValidatorComponent.validate(robotInitiator);
+        robotInitiatorValidator.validate(robotInitiator);
 
         var robot = new Robot(robotInitiator.name(),
                 Direction.valueOf(robotInitiator.direction()),

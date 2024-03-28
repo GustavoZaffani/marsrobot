@@ -75,7 +75,6 @@ public class RobotColisionValidatorImplTest {
 
         CoordinateProjection coordinateRobot1 = mock(CoordinateProjection.class);
         when(coordinateRobot1.getCoordinateX()).thenReturn(6);
-        when(coordinateRobot1.getCoordinateY()).thenReturn(5);
 
         when(robotRepository.findAllByActiveTrueAndIdNot(robotId)).thenReturn(List.of(coordinateRobot1));
 
